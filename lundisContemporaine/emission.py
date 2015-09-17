@@ -28,7 +28,7 @@ class EmissionInfos:
 		dirName = unicodedata.normalize('NFKD', dirName).encode('ascii', 'ignore')
 		dirName = re.sub('[^\w\s-]', '', dirName).strip().lower()	
 		
-		path = os.path.join("downloads",dirName)
+		path = os.path.join("/mnt/NAS/REMI/musique/France Musique/_Le concert contemporain & Les lundis de la contemporaine",dirName)
 		if not os.path.exists(path):
 			logging.debug("Create directory " + path)
 			os.makedirs(path)
