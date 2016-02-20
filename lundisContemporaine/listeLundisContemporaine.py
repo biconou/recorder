@@ -13,7 +13,7 @@ def liste():
 	response = urllib2.urlopen(urlEmissionLundisContemporaine)
 	html = response.read()
 	soup = BeautifulSoup(html)
-	listeUrls = soup.select("ul.list-blck * div.content-teaser > a")
+	listeUrls = soup.select("ul.list-blck li > a")
 	for u in listeUrls:
 		logging.debug(u["href"])
 		urlEmission = "http://www.francemusique.fr/"+u["href"]
